@@ -120,10 +120,10 @@ USE_TZ = True
 
 BASE_URL = "http://localhost:8000"
 
-SQUARE_APP_ID= "sandbox-sq0idb-SRWkAMesYP5gSBlpAii1Kw" #"sq0idp-hGDpf0a5Lo1bQF9J6b6Y8Q"
-SQUARE_APP_SECRET = "sandbox-sq0csb-G-sWvaZce8bFSDtWG-7_QwB2ui0O4HN5TV9Zt09A6XI"  #"sq0csp-nWT6LVycldPVJCwTFDiCM_4YM_64WevhIjxSeCYAISE"
+SQUARE_APP_ID= "" 
+SQUARE_APP_SECRET = "" 
 SQUARE_API_URL = "https://connect.squareupsandbox.com"
-SQUARE_SANDBOX_TOKEN = "EAAAEA0tYbJTJzDRPAxWp8VQK2eVbNSh1Rhw_gb5Ff0um4naj1IfFATkN0-e8NMQ"
+SQUARE_SANDBOX_TOKEN = ""
 SQUARE_ENVIRONMENT = "sandbox"
 SQUARE_LOCATION_ID = ""
 
