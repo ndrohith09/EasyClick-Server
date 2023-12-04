@@ -1,4 +1,4 @@
-## EasyClick 
+## EasyClick
 
 EasyClick is a subscription management platform that uses predictive analytics for customer loyalty ratings, enabling businesses to target key customer segments. It not only simplifies subscription management but also transforms it into a strategic asset for businesses, driving growth and fostering long-lasting customer relationships.
 
