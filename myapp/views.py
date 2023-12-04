@@ -18,7 +18,7 @@ import requests
 import random
 import string
 
-from squarebackend.responsecode import display_response
+from easyclick.responsecode import display_response
 
 from .models import *
 from .serializers import *

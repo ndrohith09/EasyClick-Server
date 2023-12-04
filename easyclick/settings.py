@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'squarebackend.urls'
+ROOT_URLCONF = 'easyclick.urls'
 
 TEMPLATES = [
     {
@@ -76,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'squarebackend.wsgi.application'
+WSGI_APPLICATION = 'easyclick.wsgi.application'
 
 
 # Database
@@ -118,12 +118,12 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-BASE_URL = "http://localhost:8000"
+BASE_URL = "https://165.22.241.56:8000"
 
-SQUARE_APP_ID= ""
-SQUARE_APP_SECRET = ""  #"sq0csp-nWT6LVycldPVJCwTFDiCM_4YM_64WevhIjxSeCYAISE"
+SQUARE_APP_ID= "sandbox-sq0idb-SRWkAMesYP5gSBlpAii1Kw" #"sq0idp-hGDpf0a5Lo1bQF9J6b6Y8Q"
+SQUARE_APP_SECRET = "sandbox-sq0csb-G-sWvaZce8bFSDtWG-7_QwB2ui0O4HN5TV9Zt09A6XI"  #"sq0csp-nWT6LVycldPVJCwTFDiCM_4YM_64WevhIjxSeCYAISE"
 SQUARE_API_URL = "https://connect.squareupsandbox.com"
-SQUARE_SANDBOX_TOKEN = ""
+SQUARE_SANDBOX_TOKEN = "EAAAEA0tYbJTJzDRPAxWp8VQK2eVbNSh1Rhw_gb5Ff0um4naj1IfFATkN0-e8NMQ"
 SQUARE_ENVIRONMENT = "sandbox"
 SQUARE_LOCATION_ID = ""
 
@@ -142,7 +142,7 @@ else:
     # AZURE_ACCOUNT_KEY = 'Vgbnjt6LBP9U/o/nHvYp+AaDJV53QXoUOr124UDVrzBTkj7BheB27xxfosH+GTTeL27VBUBmt8rQpkPOHUmxiA=='
         
     # STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-    # MEDIA_URL = f'httpsEAAAEA0tYbJTJzDRPAxWp8VQK2eVbNSh1Rhw_gb5Ff0um4naj1IfFATkN0-e8NMQ://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
+    # MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
 
 
 # Default primary key field type
