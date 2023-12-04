@@ -4,10 +4,10 @@ from celery.schedules import crontab
 from celery import Celery
 from django.conf import settings
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE","squarebackend.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE","easyclick.settings")
 
 
-app=Celery("squarebackend")
+app=Celery("easyclick")
 app.conf.enable_utc=False
 
 app.conf.update(timezone="Asia/Kolkata")

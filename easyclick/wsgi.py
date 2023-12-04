@@ -1,5 +1,5 @@
 """
-WSGI config for squarebackend project.
+WSGI config for easyclick project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

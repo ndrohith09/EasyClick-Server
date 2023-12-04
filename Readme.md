@@ -43,7 +43,7 @@ Clone this [server repo](https://github.com/ndrohith09/EasyClick-Server) and run
 git clone https://github.com/ndrohith09/EasyClick-Server.git
 cd Square-Server
 ````
-Change the secrets in the [settings.py](https://github.com/ndrohith09/EasyClick-Server/blob/main/squarebackend/settings.py) file
+Change the secrets in the [settings.py](https://github.com/ndrohith09/EasyClick-Server/blob/main/easyclick/settings.py) file
 ```python 
 BASE_URL =  "http://localhost:8000" # your server url
 SQUARE_APP_ID= "sandbox-****-***" # your square app id
@@ -98,7 +98,7 @@ Install redis in host machine
 ``` pip install -r requirements.txt```
 
 #### Starting the worker
-```celery -A squarebackend.celery worker --pool=solo -l info```
+```celery -A easyclick.celery worker --pool=solo -l info```
 
 #### starting periodic worker
-```celery -A squarebackend beat -l INFO```
+```celery -A easyclick beat -l INFO```
