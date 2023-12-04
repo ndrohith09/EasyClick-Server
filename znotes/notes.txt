@@ -1,0 +1,7 @@
+Step 1 : Create a new group first in a industry
+Step 2 : Create a new subscription plan in that group
+Step 3 : Show that group endpoints to public
+Step 4 : During subscribing, create a new customer and subscribe to that plan after payment
+
+----------------------------------------------------
+1.Added "source_id" in MakePayment

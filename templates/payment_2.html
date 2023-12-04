@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> {{ industry_name }}</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+
+
+    <script>
+      var analytics_key = "{{ analytics_key }}";
+      console.log("analytics_key",analytics_key);
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey=analytics_key;;analytics.SNIPPET_VERSION="4.16.1";
+      analytics.load(analytics_key);
+      analytics.page();
+      }}();
+    </script>
+    
+    <script
+      type="text/javascript"
+      src="https://sandbox.web.squarecdn.com/v1/square.js"
+    ></script>
+
+    <style>
+      body {
+  font-family: 'Karla', sans-serif; }
+
+  a:hover{
+    color: #e83e8c; 
+  }
+.navbar-brand {
+  margin:0 7%;
+  font-size: 24px;
+  font-weight: 700; 
+  color: #111827;
+}
+
+.pricing-table-subtitle {
+  margin-top: 68px;
+  color: #e83e8c;
+  font-weight: bolder; }
+
+.pricing-table-title {
+  font-weight: bold;
+  margin-bottom: 68px; 
+}
+
+.pricing-card {
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  text-align: center; 
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s; }
+
+  .pricing-card:hover {
+    box-shadow: 0 2px 40px 0 rgba(205, 205, 205, 0.55); }
+
+  .pricing-card.pricing-card-highlighted {
+    border: 1px solid rgba(205, 205, 205, 0.55);
+    /* box-shadow: 0 2px 40px 0 rgba(205, 205, 205, 0.55);  */
+  }
+
+  .pricing-card:hover {
+    box-shadow: 0 2px 40px 0 rgba(205, 205, 205, 0.55);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); 
+    } 
+    .pricing-card-no:hover {
+      box-shadow: 0 2px 40px 0 rgba(205, 205, 205, 0.55);
+      transform: none !important; 
+      
+      }
+  .pricing-card .card-body {
+    padding-top: 55px;
+    /* padding-bottom: 62px;  */
+  }
+
+.pricing-plan-title {
+  font-size: 20px;
+  color: #111827;
+  margin-bottom: 11px;
+  text-align: start;
+  padding-left: 8px;
+  font-weight: normal; }
+
+.pricing-plan-cost {
+  font-size: 50px;
+  color: #111827;
+  font-weight: bold;
+  text-align: start;
+  padding-left: 8px;
+  margin-bottom: 29px; }
+
+.pricing-plan-cost-cadence{
+  font-size: 16px;
+  color: #303132ed;
+  }
+
+.pricing-plan-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 1; 
+}
+  .pricing-plan-basic .pricing-plan-icon {
+    color: #e83e8c; }   
+  .pricing-plan-pro .pricing-plan-icon {
+    color: #e83e8c; }
+  .pricing-plan-enterprise .pricing-plan-icon {
+    color: #5d78ff; }
+
+.pricing-plan-features {
+  list-style: none;
+  padding-left: 8px;
+  font-size: 14px;
+  line-height: 2.14;
+  text-align: start;
+  margin-bottom: 35px;
+  color: #303132; }
+
+.pricing-plan-purchase-btn {
+  color: #111827;
+  font-size: 16px;
+  font-weight: bold;
+  width: 145px;
+  height: 45px;
+  border-radius: 10px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: center;
+          justify-content: center; }
+  .pricing-plan-basic .pricing-plan-purchase-btn {
+    background-color: #e83e8c;
+    color: #fff; }
+    .pricing-plan-basic .pricing-plan-purchase-btn:hover {
+      box-shadow: 0 3px 0 0 #c50c62; 
+    }
+    .pricing-plan-basic .pricing-plan-purchase-btn:active {
+      -webkit-transform: translateY(3px);
+              transform: translateY(3px);
+      box-shadow: none; }
+  .pricing-plan-pro .pricing-plan-purchase-btn {
+    background-color: #e83e8c;
+    color: #fff; }
+    .pricing-plan-pro .pricing-plan-purchase-btn:hover {
+      box-shadow: 0 3px 0 0 #c50c62; }
+    .pricing-plan-pro .pricing-plan-purchase-btn:active {
+      -webkit-transform: translateY(3px);
+              transform: translateY(3px);
+      box-shadow: none; }
+  .pricing-plan-enterprise .pricing-plan-purchase-btn {
+    background-color: #5d78ff;
+    color: #fff; }
+    .pricing-plan-enterprise .pricing-plan-purchase-btn:hover {
+      box-shadow: 0 3px 0 0 #1138ff; }
+    .pricing-plan-enterprise .pricing-plan-purchase-btn:active {
+      -webkit-transform: translateY(3px);
+              transform: translateY(3px);
+      box-shadow: none; }
+
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <nav class="navbar bg-body-tertiary"  style="box-shadow: 0 2px 40px 0 rgba(205, 205, 205, 0.55);">
+        <div class="container-fluid">
+          <a class="navbar-brand" 
+          href=""  
+          onclick="openLink()"
+          id="dynamic-link">
+            <img
+           src="https://firebasestorage.googleapis.com/v0/b/react-firechat-ae4bf.appspot.com/o/square.svg?alt=media&token=8629d4be-6a66-4db8-9eea-0ecf22cd4dea"
+           alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+           {{ industry_name }}
+          </a>
+        </div>
+      </nav>
+
+      <div class="container">
+        
+        <h5 class="text-center pricing-table-subtitle">PLANS</h5>
+        <h1 class="text-center pricing-table-title">Payment Checkout</h1>
+        <div class="row">
+          <div class="container col-md-6">
+            <div
+              class="card pricing-card pricing-card-no pricing-card-highlighted pricing-plan-basic"
+              style="text-align : start;"
+            >
+              <div class="card-body"> 
+                <div class="container" >
+                    <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Payment Amount</p>
+                {% load custom_filters %}
+                    <h3 class="pricing-plan-cost mb-3" style="font-size: 21px;">${{plan_amt|divide_string_by_100}} ({{plan_name}} Plan-{{group_name}})</h3>
+                    <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Name on card</p>
+                    <input id="nameInput" type="text" class="form-control mb-3" placeholder="Rohith ND" required>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Email</p>
+                            <input id="emailInput" type="email" class="form-control mb-3" placeholder="admin@gmail.com" required>                    
+                        </div>    
+                        <div class="col-6">
+                            <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Mobile Number</p>
+                            <input id="mobileInput" type="number" class="form-control mb-3" placeholder="1234567890" required>                    
+                        </div>     
+                    </div>
+
+                    <form id="payment-form">
+                      <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Card Details</p>
+                      <div id="card-container"></div>
+                      <button id="card-button" class="btn pricing-plan-purchase-btn w-100" type="button">Pay ${{plan_amt}}</button>
+                    </form>
+                    <div id="payment-status-container"></div>
+                    <!-- <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Card Number</p>
+                    <input type="text" id="cardInput" class="form-control mb-3" placeholder="1001 1001 1001 1001" required>
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Expiry Date</p>
+                            <input type="text" id="expiryInput" class="form-control mb-3" placeholder="04/26" required>                    
+                        </div>    
+                        <div class="col-4">
+                            <p class="pricing-plan-cost-cadence" style="font-weight: 800;">CVV</p>
+                            <input type="text" id="cvvInput" class="form-control mb-3" placeholder="000" required>                    
+                        </div>    
+                        <div class="col-4">
+                            <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Postal Code </p>
+                            <input type="text" id="postalInput" class="form-control mb-3" placeholder="11111" required>                    
+                        </div>    
+                    </div> -->
+                    <br />
+                    <!-- <button onclick="makePayment()" class="btn pricing-plan-purchase-btn w-100">Purchase</button>  -->
+                  </div>
+      
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </main>
+
+    <script> 
+
+      var subscription_model_id = "{{ subscription_model_id }}";
+       var group_name = "{{ group_name }}";
+       var industry_name = "{{ industry_name }}";
+       var plan_amt = "{{ plan_amt }}";
+       var plan_id = "{{ plan_id }}"  
+       var plan_name = "{{ plan_name }}"  
+       var endpoint_path = "{{ endpoint_path }}" 
+       var square_application_id = "{{ square_application_id }}"
+       var location_id = "{{ location_id }}"
+        // const locationId = 'TC4Z3ZEBKRXRH'; 
+      var cardData = ""
+  
+        async function initializeCard(payments) {
+          const card = await payments.card();
+          await card.attach('#card-container');
+  
+          return card;
+        } 
+        
+        async function tokenize(paymentMethod) {
+          const tokenResult = await paymentMethod.tokenize();
+          if (tokenResult.status === 'OK') {
+            console.log('Tokenization successful' , tokenResult); 
+            return [tokenResult.token , tokenResult.details.card.last4 , tokenResult.details.card.expMonth , tokenResult.details.card.expYear];
+          } else {
+            let errorMessage = `Tokenization failed with status: ${tokenResult.status}`;
+            if (tokenResult.errors) {
+              errorMessage += ` and errors: ${JSON.stringify(
+                tokenResult.errors
+              )}`;
+            }
+  
+            throw new Error(errorMessage);
+          }
+        }
+       document.addEventListener('DOMContentLoaded', async function () {
+          if (!window.Square) {
+            throw new Error('Square.js failed to load properly');
+          }
+  
+          let payments;
+          try {
+            payments = window.Square.payments(square_application_id, location_id);
+          } catch {
+            const statusContainer = document.getElementById(
+              'payment-status-container'
+            );
+            statusContainer.className = 'missing-credentials';
+            statusContainer.style.visibility = 'visible';
+            return;
+          }
+  
+          let card;
+          try {
+            card = await initializeCard(payments);
+          } catch (e) {
+            console.error('Initializing Card failed', e);
+            return;
+          }
+  
+          async function handlePaymentMethodSubmission(event, card) {
+            event.preventDefault();
+  
+            try {  
+              var resdata = await tokenize(card);  
+              console.log('Payment token', resdata); 
+            } catch (e) {  
+              console.error(e.message);
+            }
+  
+          var iname = document.getElementById("nameInput").value; 
+          var email = document.getElementById("emailInput").value;
+          var phone_number = document.getElementById("mobileInput").value;  
+  
+  
+            var data = {
+                name : iname,
+                email : email,
+                phone_number : phone_number,
+                plan_id : plan_id,
+                plan : plan_name,
+                group:group_name, 
+                industry:industry_name,
+                subscription_model_id : subscription_model_id,
+                plan_amt: plan_amt,
+                source_id : resdata[0],
+                card_number : resdata[1],
+                exp_month : resdata[2],
+                exp_year : resdata[3],
+              } 
+  
+          console.log("plan_amt", data ); 
+          $.ajax({
+            type: "POST",
+            url: '/api/v1/make-payment/',
+            data: data,
+            success: function(data){
+              console.log(data);
+              Swal.fire(
+                'Woohah!',
+                'You have subscribed!',
+                'success'
+              ) 
+              setTimeout(function() {
+              window.location.href = `/source/public-share/${endpoint_path}`; 
+              }, 2000);
+            },
+            error: function(error){
+              console.log(error); 
+            }
+          });
+          }
+  
+          const cardButton = document.getElementById('card-button');
+          cardButton.addEventListener('click', async function (event) {
+            await handlePaymentMethodSubmission(event, card);
+          });
+        });
+  </script>
+
+<script>
+ 
+  function openLink() { 
+    const linkElement = document.getElementById("dynamic-link");
+    linkElement.href = `/source/public-share/${endpoint_path}`; 
+  }
+
+  async function initializeCard(payments) {
+      const card = await payments.card();
+      await card.attach('#card-container');
+
+      return card;
+    }
+
+  async function makePayment(){
+
+  await handlePaymentMethodSubmission(card);
+
+
+    }  
+  </script>
+    <!-- <script>  
+      // var subscription_model_id = "{{ subscription_model_id }}";
+      // var group_name = "{{ group_name }}";
+      // var industry_name = "{{ industry_name }}";
+      // var plan_amt = "{{ plan_amt }}";
+      // var plan_id = "{{ plan_id }}"  
+      // var endpoint_path = "{{ endpoint_path }}"
+  
+      var subscription_model_id = "{{ subscription_model_id }}";
+     var group_name = "{{ group_name }}";
+     var industry_name = "{{ industry_name }}";
+     var plan_amt = "{{ plan_amt }}";
+     var plan_id = "{{ plan_id }}"  
+     var plan_name = "{{ plan_name }}"  
+     var endpoint_path = "{{ endpoint_path }}" 
+     var square_application_id = "{{ square_application_id }}"
+     var location_id = "{{ location_id }}"
+
+      function openLink() { 
+      const linkElement = document.getElementById("dynamic-link");
+      linkElement.href = `/source/public-share/${endpoint_path}`; 
+    }
+ 
+      function makePayment(){
+ 
+        var iname = document.getElementById("nameInput").value; 
+        var email = document.getElementById("emailInput").value;
+        var phone_number = document.getElementById("mobileInput").value;  
+
+
+      //  var iname = document.getElementById("nameInput").value; 
+      // var email = document.getElementById("emailInput").value;
+      // var phone_number = document.getElementById("mobileInput").value;
+      // var card = document.getElementById("cardInput").value;
+      // var expiry = document.getElementById("expiryInput").value;
+      // var cvv = document.getElementById("cvvInput").value;
+      // var postal = document.getElementById("postalInput").value;
+ 
+      //  var data = {
+      //    name : iname,
+      //    email : email,
+      //    phone_number : phone_number,
+      //    plan_id : plan_id,
+      //    subscription_model_id : subscription_model_id,
+      //    plan_amt: plan_amt,
+      //    card : card,
+      //  } 
+ 
+      var data = {
+              name : iname,
+              email : email,
+              phone_number : phone_number,
+              plan_id : plan_id,
+              plan : plan_name,
+              group:group_name, 
+              industry:industry_name,
+              subscription_model_id : subscription_model_id,
+              plan_amt: plan_amt,
+              source_id : resdata[0],
+              card_number : resdata[1],
+              exp_month : resdata[2],
+              exp_year : resdata[3],
+            }
+
+      // console.log("plan_amt", data ); 
+         $.ajax({
+           type: "POST",
+           url: '/api/v1/make-payment/',
+           data: data,
+           success: function(data){
+             console.log(data);
+             Swal.fire(
+               'Woohah!',
+               'You have subscribed!',
+               'success'
+             ) 
+             setTimeout(function() {
+             window.location.href = `/source/public-share/${endpoint_path}`; 
+             }, 2000);
+           },
+           error: function(error){
+             console.log(error); 
+           }
+         });
+       } 
+     </script>
+      -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+[
+    {'type': 'SUBSCRIPTION_PLAN', 
+    'id': 'YOCGL3G3TNJOENCDUB34U7ZS', 'updated_at': '2023-05-30T06:01:35.754Z', 
+    'created_at': '2023-05-30T06:01:35.754Z', 
+    'version': 1685426495754, 'is_deleted': False, 
+    'present_at_all_locations': True, 
+    'subscription_plan_data': {'name': 'Basic', 
+    'phases': [
+        {'uid': 'XB2QL3B256UPV7P3WVEKRLHG', 'cadence': 'QUARTERLY', 'periods': 1, 
+        'recurring_price_money': {'amount': 130, 'currency': 'USD'}, 'ordinal': 0}
+        ]}, 'plan_data': OrderedDict([('id', 1), ('plan_id', 'YOCGL3G3TNJOENCDUB34U7ZS'), ('notes', 'Basic features'), ('points', ['test', 'point', '']), ('created_at', '2023-05-30T11:31:35.987817+05:30')])}, {'type': 'SUBSCRIPTION_PLAN', 'id': 'LMKGCYE5K74ULGIAC7F7N76Y', 'updated_at': '2023-05-30T06:12:22.424Z', 'created_at': '2023-05-30T06:12:22.424Z', 'version': 1685427142424, 'is_deleted': False, 'present_at_all_locations': True, 'subscription_plan_data': {'name': 'Pro', 'phases': [{'uid': 'Y7RFRDJRURL2APHA2C64YVLN', 'cadence': 'QUARTERLY', 'periods': 1, 'recurring_price_money': {'amount': 140, 'currency': 'USD'}, 'ordinal': 0}]}, 'plan_data': OrderedDict([('id', 2), ('plan_id', 'LMKGCYE5K74ULGIAC7F7N76Y'), ('notes', 'Pro features'), ('points', ['point 1', 'point 2', '']), ('created_at', '2023-05-30T11:42:22.632913+05:30')])}]
+
+
+{'type': 'SUBSCRIPTION_PLAN', 
+'id': 'YOCGL3G3TNJOENCDUB34U7ZS', 
+'updated_at': '2023-05-30T06:01:35.754Z', 
+'created_at': '2023-05-30T06:01:35.754Z', 
+'version': 1685426495754, 'is_deleted': False, 
+'present_at_all_locations': True, 
+'subscription_plan_data': {'name': 'Basic', 
+        'phases': [
+            {'uid': 'XB2QL3B256UPV7P3WVEKRLHG', 
+            'cadence': 'QUARTERLY', 
+            'periods': 1, 
+            'recurring_price_money': {'amount': 130, 'currency': 'USD'}, 
+            'ordinal': 0}
+            ]}, 
+'plan_notes': 'Basic features', 
+'plan_points': ['test', 'point', '']

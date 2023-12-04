@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ industry_name }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="assets/css/pricing-plan.css"> -->
+
+
+  <script>
+    var analytics_key = "{{ analytics_key }}";
+    console.log("analytics_key",analytics_key);
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey=analytics_key;;analytics.SNIPPET_VERSION="4.16.1";
+    analytics.load(analytics_key);
+    analytics.page();
+    }}();
+  </script>
+  
+  <style>
+  body {
+  font-family: 'Karla', sans-serif;
+  background-color: #202020;
+ }
+
+  a:hover{
+    color: #e83e8c; 
+  }
+.navbar-brand {
+  margin:0 7%;
+  font-size: 24px;
+  font-weight: 700; 
+  color: #ffff;
+}
+
+.pricing-table-title {
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 36px; }
+
+
+  .pricing-table-subtitle {
+  color: #fff;
+  font-size: 21px;
+  font-weight: bolder;
+  text-decoration-line: underline;
+  text-decoration-color: #fe397a;
+  text-transform: uppercase;
+  margin-top: 36px;
+  margin-bottom: 26px; 
+  position: relative;
+} 
+
+  .pricing-card-no {
+    border: 1px solid #fe397a;
+  }
+
+.pricing-tab {
+  margin-bottom: 58px; }
+  .pricing-tab .nav-link {
+    color: #fff;
+    position: relative;
+    padding-left: 25px; }
+    .pricing-tab .nav-link::before {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      position: absolute;
+      left: 1.25px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      background-color: #fff;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+    .pricing-tab .nav-link.active {
+      background-color: transparent;
+      color: #fff; }
+      .pricing-tab .nav-link.active::before {
+        left: 0;
+        background-color: #00cd99;
+        border: 5px solid #fff;
+        width: 16.5px;
+        height: 16.5px; }
+
+.pricing-tab-content .tab-pane.active {
+  -webkit-animation: slide-down 0.6s ease-in-out;
+          animation: slide-down 0.6s ease-in-out; }
+
+@-webkit-keyframes slide-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+.pricing-card {
+  border: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  border-radius: 8px; }
+  @media (max-width: 767px) {
+    .pricing-card {
+      margin-bottom: 28px; } }
+  .pricing-card .card-body {
+    padding: 35px 35px 16px; }
+  .pricing-card .card-footer {
+    background-color: transparent;
+    border-top: 0;
+    padding: 0; }
+  .pricing-card.pricing-card-highlighted, .pricing-card:hover {
+    background-color: #fe397a; }
+
+.pricing-plan-title {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 7px;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .pricing-card-highlighted .pricing-plan-title, .pricing-card:hover .pricing-plan-title {
+    color: #fff; }
+
+.pricing-plan-original-cost {
+  font-size: 20px;
+  color: #c1c1c1;
+  font-weight: bold;
+  margin-bottom: 0; }
+  .pricing-card-highlighted .pricing-plan-original-cost, .pricing-card:hover .pricing-plan-original-cost {
+    color: #fff;
+    opacity: 0.75; }
+
+.pricing-plan-cost {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 17px;
+  color: #000; }
+  .pricing-plan-cost .currency {
+    font-size: 18px;
+    position: relative;
+    left: -5px; }
+  .pricing-card-highlighted .pricing-plan-cost, .pricing-card:hover .pricing-plan-cost {
+    color: #fff; }
+
+.pricing-plan-features {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.67;
+  font-size: 15px;
+  margin-bottom: 40px; }
+  .pricing-card-highlighted .pricing-plan-features, .pricing-card:hover .pricing-plan-features {
+    color: #fff; }
+  .pricing-plan-features li {
+    padding-left: 21px;
+    position: relative; }
+    .pricing-plan-features li::before {
+      content: "\F12C";
+      font-family: "Material Design Icons";
+      color: #3ccf8e;
+      position: absolute;
+      left: 0; }
+      .pricing-card-highlighted .pricing-plan-features li::before, .pricing-card:hover .pricing-plan-features li::before {
+        color: #fff; }
+
+.pricing-plan-purchase-btn {
+  color: #000;
+  background-color: transparent;
+  border: solid 1px #dde5f5;
+  border-radius: 4px;
+  padding: 15px 20px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  margin-bottom: 10px; }
+  .pricing-plan-purchase-btn:hover {
+    color: #fe397a; }
+  .pricing-card-highlighted .pricing-plan-purchase-btn, .pricing-card:hover .pricing-plan-purchase-btn {
+    border: 0;
+    background-color: #fff; }
+
+.pricing-plan-link {
+  color: #c1c1c1; 
+  font-size: 14px; }
+  .pricing-card-highlighted .pricing-plan-link, .pricing-card:hover .pricing-plan-link {
+    color: #fff;
+    opacity: 0.75; }
+
+.offer-badge {
+  padding: 8px 15px; 
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold; }
+
+  .pricing-plan-cost-cadence{
+    font-size: 16px;
+    color: #303132ed;
+    }
+  
+  </style> 
+
+</head>
+<body  >
+  <main >
+
+    <nav class="navbar bg-body-tertiary"
+    style="background-color: #fe397a;"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+          src="https://firebasestorage.googleapis.com/v0/b/react-firechat-ae4bf.appspot.com/o/square.svg?alt=media&token=8629d4be-6a66-4db8-9eea-0ecf22cd4dea"
+          alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+          {{ industry_name }}
+        </a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <br />
+      <h1 class="text-center pricing-table-subtitle">Pricing Plans</h1>      
+      <h1 class="text-center pricing-table-title">{{ group_name }}</h1>
+      <br />
+      <div class="row">
+        {% for plan in plans %}  
+        <div class="col-md-4">
+          <div class="card pricing-card pricing-card-highlighted">
+            <div class="card-body"> 
+              <h3 class="pricing-plan-title d-flex align-items-center">{{ plan.subscription_plan_data.name }}<span
+                  class="badge badge-pill offer-badge ml-auto">20% off</span></h3> 
+                {% load custom_filters %}
+                {% for phase in plan.subscription_plan_data.phases %}
+                      <p class="h1 pricing-plan-cost">{{ phase.recurring_price_money.amount|divide_string_by_100 }} <span class="currency">USD / {{ phase.cadence }}</span></p>
+                  {% endfor %}
+              
+                  <h3 class="pricing-plan-title d-flex align-items-center" style="text-transform: capitalize; font-weight: 400;">{{ plan.plan_notes }} </h3>
+              <!-- <p class="h1 pricing-plan-cost">{{ plan.subscription_plan_data.phases.0.recurring_price_money.amount }} <span class="currency">USD</span></p> -->
+              <ul class="pricing-plan-features"> 
+                {% for point in plan.plan_points %}
+                  {% if point != "" %}
+                    <li>{{ point }}</li>
+                  {% endif %}
+              {% endfor %}            
+              </ul>
+              {% for phase in plan.subscription_plan_data.phases %} 
+              <a 
+              onclick="passDataToBackend('{{ phase.recurring_price_money.amount }}','{{ plan.id }}', '{{ plan.subscription_plan_data.name }}')"
+              class="btn pricing-plan-purchase-btn">Purchase</a>
+                  {% endfor %}
+                  <div class="text-center">
+                <a href="#!" class="pricing-plan-link">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %} 
+       
+      </div> 
+    </div>
+    <br />
+    <br />
+  </main>
+  <script >
+    var industry_name = "{{ industry_name }}";
+    var group_name = "{{ group_name }}";  
+    var endpoint_path = "{{ endpoint_path }}";
+    var subscription_model_id = "{{ subscription_model_id }}";
+  
+    // function to pass data to the backend endpoint
+    function passDataToBackend(plan_amt , plan_id, plan_name){ 
+      $.ajax({
+        type: "GET",
+        url: `${endpoint_path}/payment?subscription_model_id=${subscription_model_id}&plan_amt=${plan_amt}&plan_id=${plan_id}&plan_name=${plan_name}`,
+        success: function(data){ 
+          window.location.href = `/source/public-share/${endpoint_path}/payment?subscription_model_id=${subscription_model_id}&plan_amt=${plan_amt}&plan_id=${plan_id}&plan_name=${plan_name}`;
+        },
+        error: function(error){
+          console.log(error); 
+        }
+      });
+    }
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

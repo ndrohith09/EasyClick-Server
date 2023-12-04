@@ -1,0 +1,4 @@
+venv
+ven
+myapp/__pycache__/*
+squarebackend/__pycache__/*

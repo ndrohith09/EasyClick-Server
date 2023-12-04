@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    /> 
+
+    <script
+      type="text/javascript"
+      src="https://sandbox.web.squarecdn.com/v1/square.js"
+    ></script>
+    
+
+    <script>
+      var analytics_key = "{{ analytics_key }}";
+      console.log("analytics_key",analytics_key);
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){if(window.analytics.initialized)return window.analytics[e].apply(window.analytics,arguments);var i=Array.prototype.slice.call(arguments);i.unshift(e);analytics.push(i);return analytics}};for(var i=0;i<analytics.methods.length;i++){var key=analytics.methods[i];analytics[key]=analytics.factory(key)}analytics.load=function(key,i){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=i};analytics._writeKey=analytics_key;;analytics.SNIPPET_VERSION="4.16.1";
+      analytics.load(analytics_key);
+      analytics.page();
+      }}();
+    </script>
+    
+    <style>
+      body {
+  font-family: 'Karla', sans-serif;
+  background-color: #202020; }
+
+  a:hover{
+    color: #e83e8c; 
+  }
+.navbar-brand {
+  margin:0 7%;
+  font-size: 24px;
+  font-weight: 700; 
+  color: #ffff;
+}
+
+.pricing-table-title {
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 36px;
+  margin-bottom: 36px; }
+
+  .pricing-card-no {
+    border: 1px solid #fe397a;
+  }
+
+.pricing-tab {
+  margin-bottom: 58px; }
+  .pricing-tab .nav-link {
+    color: #fff;
+    position: relative;
+    padding-left: 25px; }
+    .pricing-tab .nav-link::before {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      position: absolute;
+      left: 1.25px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      background-color: #fff;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+    .pricing-tab .nav-link.active {
+      background-color: transparent;
+      color: #fff; }
+      .pricing-tab .nav-link.active::before {
+        left: 0;
+        background-color: #00cd99;
+        border: 5px solid #fff;
+        width: 16.5px;
+        height: 16.5px; }
+
+.pricing-tab-content .tab-pane.active {
+  -webkit-animation: slide-down 0.6s ease-in-out;
+          animation: slide-down 0.6s ease-in-out; }
+
+@-webkit-keyframes slide-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(5%);
+            transform: translateY(5%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+.pricing-card {
+  border: none;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  border-radius: 8px; }
+  @media (max-width: 767px) {
+    .pricing-card {
+      margin-bottom: 28px; } }
+  .pricing-card .card-body {
+    padding: 35px 35px 16px; }
+  .pricing-card .card-footer {
+    background-color: transparent;
+    border-top: 0;
+    padding: 0; }
+  .pricing-card.pricing-card-highlighted, .pricing-card:hover {
+    background-color: #fe397a; }
+
+.pricing-plan-title {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 7px;
+  font-weight: bold;
+  text-transform: uppercase; }
+  .pricing-card-highlighted .pricing-plan-title, .pricing-card:hover .pricing-plan-title {
+    color: #fff; }
+
+.pricing-plan-original-cost {
+  font-size: 20px;
+  color: #c1c1c1;
+  font-weight: bold;
+  margin-bottom: 0; }
+  .pricing-card-highlighted .pricing-plan-original-cost, .pricing-card:hover .pricing-plan-original-cost {
+    color: #fff;
+    opacity: 0.75; }
+
+.pricing-plan-cost {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 17px;
+  color: #000; }
+  .pricing-plan-cost .currency {
+    font-size: 20px;
+    position: relative;
+    left: -5px; }
+  .pricing-card-highlighted .pricing-plan-cost, .pricing-card:hover .pricing-plan-cost {
+    color: #fff; }
+
+.pricing-plan-features {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.67;
+  font-size: 15px;
+  margin-bottom: 40px; }
+  .pricing-card-highlighted .pricing-plan-features, .pricing-card:hover .pricing-plan-features {
+    color: #fff; }
+  .pricing-plan-features li {
+    padding-left: 21px;
+    position: relative; }
+    .pricing-plan-features li::before {
+      content: "\F12C";
+      font-family: "Material Design Icons";
+      color: #3ccf8e;
+      position: absolute;
+      left: 0; }
+      .pricing-card-highlighted .pricing-plan-features li::before, .pricing-card:hover .pricing-plan-features li::before {
+        color: #fff; }
+
+.pricing-plan-purchase-btn {
+  color: #000;
+  background-color: transparent;
+  border: solid 1px #dde5f5;
+  border-radius: 4px;
+  padding: 15px 20px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  margin-bottom: 10px; }
+  .pricing-plan-purchase-btn:hover {
+    color: #fe397a; }
+  .pricing-card-highlighted .pricing-plan-purchase-btn, .pricing-card:hover .pricing-plan-purchase-btn {
+    border: 0;
+    background-color: #fff; }
+
+.pricing-plan-link {
+  color: #c1c1c1; 
+  font-size: 14px; }
+  .pricing-card-highlighted .pricing-plan-link, .pricing-card:hover .pricing-plan-link {
+    color: #fff;
+    opacity: 0.75; }
+
+.offer-badge {
+  padding: 8px 15px; 
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold; }
+
+  .pricing-plan-cost-cadence{
+    font-size: 16px;
+    color: #303132ed;
+    }
+  
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <nav class="navbar bg-body-tertiary"
+      style="background-color: #fe397a;"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href=""  
+          onclick="openLink()"
+          id="dynamic-link">
+            <img 
+           src="https://firebasestorage.googleapis.com/v0/b/react-firechat-ae4bf.appspot.com/o/square.svg?alt=media&token=8629d4be-6a66-4db8-9eea-0ecf22cd4dea"
+           alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+           {{ industry_name }}
+          </a>
+        </div>
+      </nav>
+
+      <div class="container">
+        
+        <h5 class="text-center pricing-table-subtitle">PLANS</h5>
+        <h1 class="text-center pricing-table-title">Payment Checkout</h1>
+        <div class="row">
+          <div class="container col-md-6">
+            <div
+              class="card pricing-card pricing-card-no pricing-card-highlighted pricing-plan-basic"
+              style="text-align : start; background-color: #ffff;"
+            >
+              <div class="card-body"> 
+                <div class="container" >
+                    <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Payment Amount</p>
+                {% load custom_filters %}
+                    <h3 class="pricing-plan-cost mb-3" style="font-size: 21px; color: #808080;">${{plan_amt|divide_string_by_100}} ({{plan_name}} Plan-{{group_name}})</h3>
+                    <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Name on card</p>
+                    <input id="nameInput" type="text" class="form-control mb-3" placeholder="Rohith ND" required>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Email</p>
+                            <input id="emailInput" type="email" class="form-control mb-3" placeholder="admin@gmail.com" required>                    
+                        </div>    
+                        <div class="col-6">
+                            <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Mobile Number</p>
+                            <input id="mobileInput" type="number" class="form-control mb-3" placeholder="1234567890" required>                    
+                        </div>     
+                    </div>
+                    <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Card Number</p>
+                    <input type="text" id="cardInput" class="form-control mb-3" placeholder="1001 1001 1001 1001" required>
+                    <div class="row">
+                        <div class="col-4">
+                            <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Expiry Date</p>
+                            <input type="text" id="expiryInput" class="form-control mb-3" placeholder="04/26" required>                    
+                        </div>    
+                        <div class="col-4">
+                            <p class="pricing-plan-cost-cadence" style="font-weight: 800;">CVV</p>
+                            <input type="text" id="cvvInput" class="form-control mb-3" placeholder="000" required>                    
+                        </div>    
+                        <div class="col-4">
+                            <p class="pricing-plan-cost-cadence" style="font-weight: 800;">Postal Code </p>
+                            <input type="text" id="postalInput" class="form-control mb-3" placeholder="11111" required>                    
+                        </div>    
+                    </div>
+                    <br />
+                    <button onclick="makePayment()" class="btn pricing-plan-purchase-btn w-100" style="color:white; background-color: #fe397a;">Purchase</button> 
+                  </div> 
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </main>
+
+    <script> 
+
+      var subscription_model_id = "{{ subscription_model_id }}";
+       var group_name = "{{ group_name }}";
+       var industry_name = "{{ industry_name }}";
+       var plan_amt = "{{ plan_amt }}";
+       var plan_id = "{{ plan_id }}"  
+       var plan_name = "{{ plan_name }}"  
+       var endpoint_path = "{{ endpoint_path }}" 
+       var square_application_id = "{{ square_application_id }}"
+       var location_id = "{{ location_id }}"
+        // const locationId = 'TC4Z3ZEBKRXRH'; 
+      var cardData = ""
+  
+        async function initializeCard(payments) {
+          const card = await payments.card();
+          await card.attach('#card-container');
+  
+          return card;
+        } 
+        
+        async function tokenize(paymentMethod) {
+          const tokenResult = await paymentMethod.tokenize();
+          if (tokenResult.status === 'OK') {
+            console.log('Tokenization successful' , tokenResult); 
+            return [tokenResult.token , tokenResult.details.card.last4 , tokenResult.details.card.expMonth , tokenResult.details.card.expYear];
+          } else {
+            let errorMessage = `Tokenization failed with status: ${tokenResult.status}`;
+            if (tokenResult.errors) {
+              errorMessage += ` and errors: ${JSON.stringify(
+                tokenResult.errors
+              )}`;
+            }
+  
+            throw new Error(errorMessage);
+          }
+        }
+       document.addEventListener('DOMContentLoaded', async function () {
+          if (!window.Square) {
+            throw new Error('Square.js failed to load properly');
+          }
+  
+          let payments;
+          try {
+            payments = window.Square.payments(square_application_id, location_id);
+          } catch {
+            const statusContainer = document.getElementById(
+              'payment-status-container'
+            );
+            statusContainer.className = 'missing-credentials';
+            statusContainer.style.visibility = 'visible';
+            return;
+          }
+  
+          let card;
+          try {
+            card = await initializeCard(payments);
+          } catch (e) {
+            console.error('Initializing Card failed', e);
+            return;
+          }
+  
+          async function handlePaymentMethodSubmission(event, card) {
+            event.preventDefault();
+  
+            try {  
+              var resdata = await tokenize(card);  
+              console.log('Payment token', resdata); 
+            } catch (e) {  
+              console.error(e.message);
+            }
+  
+          var iname = document.getElementById("nameInput").value; 
+          var email = document.getElementById("emailInput").value;
+          var phone_number = document.getElementById("mobileInput").value;  
+  
+  
+            var data = {
+                name : iname,
+                email : email,
+                phone_number : phone_number,
+                plan_id : plan_id,
+                plan : plan_name,
+                group:group_name, 
+                industry:industry_name,
+                subscription_model_id : subscription_model_id,
+                plan_amt: plan_amt,
+                source_id : resdata[0],
+                card_number : resdata[1],
+                exp_month : resdata[2],
+                exp_year : resdata[3],
+              } 
+  
+          console.log("plan_amt", data ); 
+          $.ajax({
+            type: "POST",
+            url: '/api/v1/make-payment/',
+            data: data,
+            success: function(data){
+              console.log(data);
+              Swal.fire(
+                'Woohah!',
+                'You have subscribed!',
+                'success'
+              ) 
+              setTimeout(function() {
+              window.location.href = `/source/public-share/${endpoint_path}`; 
+              }, 2000);
+            },
+            error: function(error){
+              console.log(error); 
+            }
+          });
+          }
+  
+          const cardButton = document.getElementById('card-button');
+          cardButton.addEventListener('click', async function (event) {
+            await handlePaymentMethodSubmission(event, card);
+          });
+        });
+  </script>
+  <script>
+ 
+
+    
+
+    function openLink() { 
+      const linkElement = document.getElementById("dynamic-link");
+      linkElement.href = `/source/public-share/${endpoint_path}`; 
+    }
+
+    async function initializeCard(payments) {
+        const card = await payments.card();
+        await card.attach('#card-container');
+
+        return card;
+      }
+
+    async function makePayment(){
+
+    await handlePaymentMethodSubmission(card);
+
+
+      }  
+    </script>
+    <!-- <script>  
+      var subscription_model_id = "{{ subscription_model_id }}";
+      var group_name = "{{ group_name }}";
+      var industry_name = "{{ industry_name }}";
+      var plan_amt = "{{ plan_amt }}";
+      var plan_id = "{{ plan_id }}"  
+      var endpoint_path = "{{ endpoint_path }}"
+      
+      function openLink() { 
+      const linkElement = document.getElementById("dynamic-link");
+      linkElement.href = `/source/public-share/${endpoint_path}`; 
+      }
+ 
+      function makePayment(){
+ 
+       var iname = document.getElementById("nameInput").value; 
+      var email = document.getElementById("emailInput").value;
+      var phone_number = document.getElementById("mobileInput").value;
+      var card = document.getElementById("cardInput").value;
+      var expiry = document.getElementById("expiryInput").value;
+      var cvv = document.getElementById("cvvInput").value;
+      var postal = document.getElementById("postalInput").value;
+ 
+       var data = {
+         name : iname,
+         email : email,
+         phone_number : phone_number,
+         plan_id : plan_id,
+         subscription_model_id : subscription_model_id,
+         plan_amt: plan_amt,
+         card : card,
+       }  
+  
+         $.ajax({
+           type: "POST",
+           url: '/api/v1/make-payment/',
+           data: data,
+           success: function(data){
+             console.log(data);
+             Swal.fire(
+               'Woohah!',
+               'You have subscribed!',
+               'success'
+             ) 
+             setTimeout(function() {
+             window.location.href = `/source/public-share/${endpoint_path}`; 
+             }, 2000);
+           },
+           error: function(error){
+             console.log(error); 
+           }
+         });
+       } 
+     </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
