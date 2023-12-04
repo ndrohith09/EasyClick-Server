@@ -120,8 +120,8 @@ USE_TZ = True
 
 BASE_URL = "http://localhost:8000"
 
-SQUARE_APP_ID= "" 
-SQUARE_APP_SECRET = "" 
+SQUARE_APP_ID= ""
+SQUARE_APP_SECRET = ""  #"sq0csp-nWT6LVycldPVJCwTFDiCM_4YM_64WevhIjxSeCYAISE"
 SQUARE_API_URL = "https://connect.squareupsandbox.com"
 SQUARE_SANDBOX_TOKEN = ""
 SQUARE_ENVIRONMENT = "sandbox"
@@ -142,7 +142,7 @@ else:
     # AZURE_ACCOUNT_KEY = 'Vgbnjt6LBP9U/o/nHvYp+AaDJV53QXoUOr124UDVrzBTkj7BheB27xxfosH+GTTeL27VBUBmt8rQpkPOHUmxiA=='
         
     # STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-    # MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
+    # MEDIA_URL = f'httpsEAAAEA0tYbJTJzDRPAxWp8VQK2eVbNSh1Rhw_gb5Ff0um4naj1IfFATkN0-e8NMQ://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
 
 
 # Default primary key field type
